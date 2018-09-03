@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bounce.wav</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var selectedOne = 0;
+    var selectedTwo = 0;
+    var selectedThree = 0;
+    var selectedFour = 0;
+    var selectedFive = 0;
+    var selectedSix = 0;
+
+    $("#one").click(function () {
+
+    if($('#one').css('opacity') == 0.5) {
+        selectedOne = 1;
+         $("#one").addClass('notfaded');
+         $("#link").attr('href', 'xaxis.html');
+
+
+  }else{
+    selectedOne = 0;
+    // alert(selectedOne);
+    $("#one").removeClass('notfaded');
+    $("#link").attr('href', '');
+
+
+
+}
+
+    });
+
+  $("#two").click(function () {
+      if($('#two').css('opacity') == 0.5) {
+    selectedTwo = 1;
+     $("#two").addClass('notfaded');
+     $("#link").attr('href', 'vertical.html');
+
+
+}else{
+selectedTwo = 0;
+// alert(selectedOne);
+$("#two").removeClass('notfaded');
+$("#link").attr('href', '');
+}
+});
+
+$("#three").click(function () {
+    if($('#three').css('opacity') == 0.5) {
+  selectedThree= 1;
+   $("#three").addClass('notfaded');
+   $("#link").attr('href', 'xaxis.html');
+}else{
+selectedOne = 0;
+// alert(selectedOne);
+$("#three").removeClass('notfaded');
+$("#link").attr('href', '');
+}
+});
+$("#four").click(function () {
+    if($('#four').css('opacity') == 0.5) {
+  selectedFour = 1;
+   $("#four").addClass('notfaded');
+   $("#link").attr('href', 'xaxis.html');
+}else{
+selectedFour = 0;
+// alert(selectedOne);
+$("#four").removeClass('notfaded');
+$("#link").attr('href', '');
+}
+});
+
+
+$("#five").click(function () {
+    if($('#five').css('opacity') == 0.5) {
+  selectedFive = 1;
+   $("#five").addClass('notfaded');
+   $("#link").attr('href', 'vertical.html');
+}else{
+selectedFive = 0;
+$("#five").removeClass('notfaded');
+$("#link").attr('href', '');
+}
+});
+
+
+$("#six").click(function () {
+    if($('#six').css('opacity') == 0.5) {
+  selectedSix = 1;
+   $("#six").addClass('notfaded');
+   $("#link").attr('href', 'vertical.html');
+
+
+}else{
+selectedSix = 0;
+// alert(selectedOne);
+$("#six").removeClass('notfaded');
+$("#link").attr('href', '');
+}
+});
+
+
+  });
+  </script>
+
+  <style>
+    body {
+      background-color: black;
+      padding: 0px;
+      margin: 0px;
+    }
+    footer {
+      margin-top:5vw;
+     padding: 0px;
+   }
+   button{
+     opacity: 0.5;
+   }
+   #footer {
+  padding: 0px;
+  margin: 0px;
+
+
+  background-color: #f5f5f5;
+}
+.grid{
+  margin-bottom:5vw;
+}
+   html{
+     padding: 0px;
+   }
+
+   .prompt{
+     width:50vw;
+     margin-bottom: 5vw;
+   }
+   #play{
+     padding:0px;
+     width:100vw;
+
+   }
+   #logo{
+     width:15vw;
+   }
+   #wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+.col-md-6{
+  padding-bottom: 30px;
+}
+
+.col-sm-2{
+  padding-bottom: 30px;
+}
+
+.col{
+  padding-bottom: 30px;
+}
+.col-xs-6{
+  padding-bottom: 20px;
+}
+button{
+  background: none;
+
+  border: none;
+}
+
+#one {
+  opacity:0.5;
+}
+
+#one.notfaded {
+  opacity:1;
+}
+#two {
+  opacity:0.5;
+}
+#two.notfaded {
+  opacity:1;
+}
+#three {
+  opacity:0.5;
+}
+#three.notfaded {
+  opacity:1;
+}
+#four {
+  opacity:0.5;
+}
+#four.notfaded {
+  opacity:1;
+}
+#five {
+  opacity:0.5;
+}
+#five.notfaded {
+  opacity:1;
+}
+#six {
+  opacity:0.5;
+}
+#six.notfaded {
+  opacity:1;
+}
+.grid{
+ padding-left:10vw;
+ padding-right:10vw;
+}
+   @media only screen
+       and (min-device-width : 375px)
+       and (max-device-width : 667px)
+
+   {
+     .grid{
+       margin-bottom:2vw;
+     }
+     #logo{
+       width:25vw;
+     }
+     .prompt{
+       width:70vw;
+     }
+     .grid{
+      padding-left:0px;
+      padding-right:0px;
+     }
+   }
+  </style>
+</head>
+<body>
+
+
+<div id="wrap">
+<nav class="navbar navbar-inverse" style="background-color:black;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      </button>
+      <a class="navbar-brand"  href="#"><img id="logo"src = "logo.png" ></img></a>
+    </div>
+
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid bg-3 text-center">
+
+  <img class="prompt" src = "prompt.png" ></img>
+<br>
+
+</div>
+<div class="grid" >
+
+<div class="container-fluid bg-4 text-center">
+
+
+  <!-- button grid -->
+  <!-- <div class="row"> -->
+    <div  class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+      <div id="one"><img src="piano.png" class="img-responsive" style="width:100%" alt="Image"></div>
+    </div>
+    <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+      <div id="two">  <img src="kick.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+    </div>
+    <div class="col-4 col-xs-6 col-sm-4  col-md-6 col-lg-4">
+      <div id="three"><img src="bass.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+    </div>
+
+  <!-- </div> -->
+<!-- </div> -->
+<!-- <br> -->
+
+<!-- <div class="container-fluid bg-4 text-center"> -->
+
+
+  <!-- <div class="row"> -->
+    <div class="col-6 col-xs-6 col-sm-6  col-md-6 col-lg-4">
+      <div id="four">  <img src="synth.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+    </div>
+    <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+      <div  id="five"><img src="clap.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+    </div>
+    <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+      <div  id="six">  <img src="hihat.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+    </div>
+
+  </div>
+<!-- </div> -->
+<br><br>
+
+</div>
+<!-- <footer class="container-fluid text-center" style="padding:0px">
+
+</footer> -->
+</div>
+
+  <a id="link"href="">  <div id="footer">
+      <!-- <div class="container"> -->
+      <img id="play" src = "play.png" > </img>
+      <!-- </div> -->
+    </div></a>
+
+</body>
+</html>

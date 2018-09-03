@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>TITLE</title>
+  <meta name="description" content="Web-based algorithmic generation of interactive music">
+  <meta name="author" content="Ryan Carter">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./TMassets/css/TMstyles_v1-4.css">
+  <link rel="icon" type="image/png" href="./TMassets/img/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script>
+var selectedOne = 0;
+var selectedTwo = 0;
+var selectedThree = 0;
+var selectedFour = 0;
+var selectedFive = 0;
+var selectedSix = 0;
+$(document).ready(function(){
+
+  $("#one").click(function () {
+  if($('#one').css('opacity') == 1) {
+      selectedOne = 1;
+     $('#one img').attr('src', 'hand_piano.gif');
+       $("#one").addClass('notfaded');
+}else{
+  selectedOne = 0;
+  $('#one img').attr('src', 'piano2.png');
+  $("#one").removeClass('notfaded');
+}
+  });
+
+
+    $("#two").click(function () {
+    if($('#two').css('opacity') == 1) {
+        selectedTwo = 1;
+       $('#two img').attr('src', 'hand_kick.gif');
+         $("#two").addClass('notfaded');
+  }else{
+    selectedTwo = 0;
+    $('#two img').attr('src', 'kick2.png');
+    $("#two").removeClass('notfaded');
+  }
+    });
+
+
+      $("#three").click(function () {
+      if($('#three').css('opacity') == 1) {
+          selectedThree = 1;
+         $('#three img').attr('src', 'hand_bass.gif');
+           $("#three").addClass('notfaded');
+    }else{
+      selectedThree = 0;
+      $('#three img').attr('src', 'bass2.png');
+      $("#three").removeClass('notfaded');
+    }
+      });
+
+      $("#four").click(function () {
+      if($('#four').css('opacity') == 1) {
+          selectedFour = 1;
+         $('#four img').attr('src', 'hand_triangle.gif');
+           $("#four").addClass('notfaded');
+    }else{
+      selectedFour = 0;
+      $('#four img').attr('src', 'clap2.png');
+      $("#four").removeClass('notfaded');
+    }
+      });
+
+      $("#five").click(function () {
+      if($('#five').css('opacity') == 1) {
+          selectedFive = 1;
+         $('#five img').attr('src', 'hand_synth.gif');
+           $("#five").addClass('notfaded');
+    }else{
+      selectedFive = 0;
+      $('#five img').attr('src', 'synth2.png');
+      $("#five").removeClass('notfaded');
+    }
+      });
+
+
+      $("#six").click(function () {
+      if($('#six').css('opacity') == 1) {
+          selectedSix = 1;
+         $('#six img').attr('src', 'hand_hihat.gif');
+           $("#six").addClass('notfaded');
+    }else{
+      selectedSix = 0;
+      $('#six img').attr('src', 'hihat2.png');
+      $("#six").removeClass('notfaded');
+    }
+      });
+});
+</script>
+<style>
+body {
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+}
+footer {
+  margin-top:5vw;
+ padding: 0px;
+}
+button{
+ opacity: 0.5;
+}
+#footer {
+padding: 0px;
+margin: 0px;
+
+
+background-color: #f5f5f5;
+}
+.grid{
+margin-bottom:5vw;
+}
+html{
+ padding: 0px;
+}
+
+.prompt{
+ width:50vw;
+ margin-bottom: 5vw;
+}
+#play{
+ padding:0px;
+ width:100vw;
+
+}
+#logo{
+ width:15vw;
+}
+#wrap {
+min-height: 100%;
+height: auto;
+margin: 0 auto -60px;
+padding: 0 0 60px;
+}
+
+.col-md-6{
+padding-bottom: 30px;
+}
+
+.col-sm-2{
+padding-bottom: 30px;
+}
+
+.col{
+padding-bottom: 30px;
+}
+.col-xs-6{
+padding-bottom: 20px;
+}
+button{
+background: none;
+
+border: none;
+}
+
+#one {
+opacity:1;
+}
+
+#one.notfaded {
+opacity:0.8;
+}
+#two {
+opacity:1;
+}
+#two.notfaded {
+opacity:0.8;
+}
+#three {
+opacity:1;
+}
+#three.notfaded {
+opacity:0.8;
+}
+#four {
+opacity:1;
+}
+#four.notfaded {
+opacity:0.8;
+}
+#five {
+opacity:1;
+}
+#five.notfaded {
+opacity:0.8;
+}
+#six {
+opacity:1;
+}
+#six.notfaded {
+opacity:0.8;
+}
+.grid{
+padding-left:10vw;
+padding-right:10vw;
+}
+h2{
+  color:white;
+  font-size: 12pt;
+  margin-top: -40px;
+  margin-bottom:30px;
+  background-color: black;
+}
+@media only screen
+   and (min-device-width : 375px)
+   and (max-device-width : 667px)
+
+{
+  h2{
+margin-top:20px;
+    font-size: 10pt;
+margin-bottom: 0px;
+  }
+ .grid{
+   margin-bottom:2vw;
+ }
+ #logo{
+   width:25vw;
+ }
+ .prompt{
+   width:70vw;
+ }
+ .grid{
+  padding-left:0px;
+  padding-right:0px;
+ }
+}
+</style>
+<body>
+  <div id="wrap">
+  <nav class="navbar navbar-inverse" style="background-color:black;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        </button>
+        <a class="navbar-brand" ><img id="logo"src = "logo.png" ></img></a>
+      </div>
+
+
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid bg-3 text-center">
+
+    <img class="prompt" src = "prompt.png" ></img>
+    <h2>Lock orientation for best experience.</h2>
+
+  <br>
+
+
+
+  </div>
+  <div class="grid" >
+
+  <div class="container-fluid bg-4 text-center">
+
+
+    <!-- button grid -->
+    <!-- <div class="row"> -->
+      <div  class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+        <div id="one"><img src="piano2.png" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+      <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+        <div id="two">  <img src="kick2.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+      </div>
+      <div class="col-4 col-xs-6 col-sm-4  col-md-6 col-lg-4">
+        <div id="three"><img src="bass2.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+      </div>
+
+    <!-- </div> -->
+  <!-- </div> -->
+    <!-- <div class="row"> -->
+      <div class="col-6 col-xs-6 col-sm-6  col-md-6 col-lg-4">
+        <div id="four">  <img src="clap2.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+      </div>
+      <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+        <div  id="five"><img src="synth2.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+      </div>
+      <div class="col-4 col-xs-6 col-sm-4 col-md-6 col-lg-4">
+        <div  id="six">  <img src="hihat2.png" class="img-responsive" style="width:100%" alt="Image">  </div>
+      </div>
+
+    </div>
+  <!-- </div> -->
+  <br><br>
+
+  </div>
+  <!-- <footer class="container-fluid text-center" style="padding:0px">
+
+  </footer> -->
+
+<!-- <div id="Content"> -->
+
+  <!-- <div id="HeaderWrapper"> <!-- full-width wrapper for title and short description -->
+    <!-- <h1>TITLE</h1>
+    <p>SHORT DESCRIPTION with <a href="#">test link</a></p> -->
+  <!-- </div> <!-- /#HeaderWrapper -->
+
+  <!-- <div id="InfoWrapper"> <!-- forms left column on tablet/desktop. no columns on phone -->
+    <!-- <div id="StatusLabels"> <!-- this element required to use status labels (for testing) -->
+    <!-- </div> -->
+    <!-- <div class="displayToggle"> <!-- "More information" -->
+      <!-- <a href="#" class="preventDefault"><span class="disclosureTriangle">&#9658; </span>More Information</a> -->
+    <!-- </div>  -->
+    <!-- <div class="hiddenContent">
+      <p class="moreInfoQuestion">Question 1</p>
+      <p class="moreInfoAnswer">Answer 1</p>
+      <p class="moreInfoQuestion">Question 2</p>
+      <p class="moreInfoAnswer">Answer 2</p>
+    </div> -->
+    <!-- <div class="displayToggle"> <!-- "test tone" -->
+      <!-- <a href="#" class="preventDefault"><span class="disclosureTriangle">&#9658; </span>Test tone</a> -->
+    <!-- </div> -->
+    <!-- <div id="TestToneLabel" class="hiddenContent">
+      <p>The button below will produce a filtered sawtooth wave (a buzzy sound) with the oscillator frequency controlled on the x-axis and filter cutoff frequency controlled on the y-axis. (When you tilt your device to the left, the sound will be lower; when you tip your device upside down, the sound will be more buzzy.)</p>
+      <button id="TestToneButton" class="soundOff">test</button>
+      <p id="IntroStatusLabel"></p>
+    </div>
+    <h2>Instructions</h2>
+    <div id="InstructionLabel"> <!-- used to communicate instructions to user -->
+      <!-- <p id="Instructions">Please wait while the page is loading.</p> -->
+    <!-- </div> -->
+  <!-- </div> <!-- /#InfoWrapper -->
+
+  <!-- <div id="ControlWrapper"> <!-- forms right column on table/desktop. no columns on phone -->
+    <div>
+
+    <!-- </div> -->
+
+    <!-- <a  id="link"href=""> -->
+       <div id="footer">
+        <!-- <div class="container"> -->
+        <button id="TransportButton" class="resourcesAreLoading" disabled style="opacity:1; color:white; font-weight: bold; background-color:#FEA700;  font-size:40pt;  text-transform: uppercase; background-position: center;
+   width:100vw; height:100px;" >
+            <!-- <img id="play" src = "play2.png" > </img> -->
+
+          <!-- <span id="LoadingAnimation">|</span> -->
+
+        </button>
+        <!-- </div> -->
+      </div>
+     <!-- </a> -->
+    <!-- /#TransportButtonWrapper -->
+    <!-- container for XY-pad for devices that don't report motion. not displayed at load. -->
+    <!-- <div id="DragContainer"> -->
+    <!-- </div> <!-- /#DragContainer -->
+    <!--  action buttons (for ad hoc triggers) are at bottom of interface, but disabled until needed -->
+    <!-- <div id="ActionButtonWrapper"> -->
+      <!-- <div class="actionButtonColumn"><button id="ActionButton1" disabled>1</button></div> -->
+      <!-- <div class="actionButtonColumn"><button id="ActionButton2" disabled>2</button></div> -->
+      <!-- <div class="actionButtonColumn"><button id="ActionButton3" disabled>3</button></div> -->
+    <!-- </div> <!-- /#ActionButtonWrapper -->
+  <!-- </div> <!-- /#ControlWrapper -->
+
+  <!-- hidden <audio> element coerces iOS into playing audio when ring/silent switch is on silent-->
+  <audio style="display:none;"><source src="./TMassets/audio/silent-buffer-to-set-audio-session.mp3"></audio>
+
+<!-- </div> <!-- /#Content -->
+<script src="./TMassets/js/jquery.min.js"></script>
+<script src="./TMassets/js/Tone.js"></script>
+<script src="./TMassets/js/draggabilly.js"></script>
+<script src="./TMassets/js/StartAudioContext.js"></script>
+<!-- place ToneMotion above score and ToneMotionInterface below score -->
+<script src="./TMassets/js/ToneMotion_v1-1.js"></script>
+
+<script>
+/*
+** ToneMotion is an object of global scope that exposes device motion
+** properties and default values:
+** x (current x-axis value): 0.5
+** y (current y-axis value): 0.5
+** xSig (a Tone.Signal object to connect x value to signals): 0.5
+** ySig (a Tone.Signal object to connect y value to signals): 0.5
+** updateInterval (time in seconds for sampling signal and linear ramp to next value): 0.05
+** delayBeforePlaying (schedules Tone.Transport events in future): "+0.1"
+** status (whether device reports motion): "unknown"
+** showStatusLabels (should interface show motion values, etc.): false
+** print (whether to print debugging messages to console): false
+** shouldSyncToUTC (if true, transport starts at position set by UTC): false
+** deviceShouldSelfCalibrate (allows device to continuously report new troughs and peaks): false
+** deviceIsAndroid (detects if accelerometer axes need to be inverted because device is Android): false
+** shutdown(): removes event listeners and clears intervals
+*/
+/*
+** TMScore is an object for managing the cuelist
+** properties and default values:
+** st (current transport time at this point in the score): 0
+** MAX_CUES (maximum number of sections - value can not be changed without significant work): 20
+** currentCue (the current section of the score): 0
+** durForCue[cue] (duration of each section - initialized to 0): 0
+** timeAtCue(cue) (function to return time at beginning of a section)
+** totalDur() (function to return total duration of score)
+** currentCueAtTime(time) (function to return the section in which any time falls)
+** instructionsForCue[cue] (array of empty strings to be filled by instructions): ""
+** cueEnablesButtons[cue] (array of 3 elements to manage whether buttons are enabled): [0,0,0]
+** nextCue() (function to advance cue list and set button states and instructions for new cue)
+** setCue() (function to jump immediately to given section
+*/
+/******************************************************************
+************************* GENERAL PARAMETERS **********************
+*******************************************************************/
+ToneMotion.showStatusLabels = true;
+ToneMotion.delayBeforePlaying = "+0.3";
+ToneMotion.deviceShouldSelfCalibrate = false;
+ToneMotion.print = false;
+ToneMotion.shouldSyncToUTC = false;
+// ToneMotion.updateInterval = 1.0;
+// sets lookAhead. "interactive": lookAhead = 0.1; "playback": 0.8; "balanced": 0.25; "fastest": 0.01;
+Tone.context.latencyHint = ToneMotion.updateInterval / 2.0;
+
+
+// TODO: delete this buffer that is used to test loading animation
+// var needBufferForLoadingToComplete = new Tone.MultiPlayer({
+//   "revCh2417D7": "./TMassets/audio/revChime-2417Hz-D7.mp3",
+//   // "biggerFileToMakeLoadTimeLonger": "./TMassets/audio/bigger-file.mp3"
+// }, function() {
+//   // putting a callback here seems to be required
+// }).toMaster();
+
+/******************************************************************
+****************************SCORE MAP *****************************
+*******************************************************************/
+TMScore.durForCue[1] = 99999;
+function setIntroInstructions() {
+  // called when buffers have loaded and music is ready to play
+  if (ToneMotion.status == "deviceDoesReportMotion") {
+    setInstructions("The page has loaded. You can now set your device to Airplane Mode. You may also want to set the Orientation Lock to prevent the screen from rotating. When everyone is ready, tap the play button to begin the piece.");
+  }
+  else {
+    setInstructions("The page has loaded and I'll put more instructions here later.");
+  }
+}
+// use TMScore.setCue() to skip to a specific section for testing/composing (overriden if .shouldSynctoUTC is true)
+TMScore.setCue(1);
+
+/******************************************************************
+****************************** CUE 1 ******************************
+*******************************************************************/
+TMScore.instructionsForCue[1] = "Section 1: instructions";
+// following block scheduled to be called at beginning of this section
+Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
+  TMScore.nextCue();
+}, time) }, TMScore.st);
+
+/*
+// test filter for shaping piano
+var testPlayerFilter = new Tone.Filter(440, "lowpass").toMaster();
+var testPlayerFreqScale = new Tone.Scale(80, 400); // scales control signal (0.0 - 1.0)
+ToneMotion.xSig.chain(testPlayerFreqScale, testPlayerFilter.frequency);
+
+// test adding sound and mapping DSP to motion
+var testPlayer = new Tone.Player("./TMassets/audio/sounds-from-eddie/keyboard.wav").connect(testPlayerFilter);
+
+var testLoop = new Tone.Loop(function(time) {
+  // testPlayer.start();
+}, 7).start();
+
+var testKick = new Tone.Player("./TMassets/audio/sounds-from-eddie/punch_kick.wav").toMaster();
+var testKickLoop = new Tone.Loop(function(time) {
+  // testKick.start(time);
+}, 7/4).start();
+testKick.volume = -99;
+
+
+var testHiHatLoop = new Tone.Loop(function(time) {
+  // testHiHat.start(time);
+  // testHiHat.start(time+0.5);
+}, 7/4).start();
+*/
+
+
+/******************************************************************
+********************** START OF CODE FOR SOUND ********************
+*******************************************************************/
+
+/******************************************************************
+************************** SYNTHESIZED SOUNDS *********************
+*******************************************************************/
+
+// LEAD SYNTH
+var leadSynthFilter = new Tone.Filter(440, "lowpass").toMaster();
+var leadSynth = new Tone.Synth({
+  oscillator: {
+    type: "sawtooth"
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.1,
+    sustain: 0.9,
+    release: 0.1
+  }
+}).connect(leadSynthFilter);
+// mute sound
+leadSynth.volume.value = -99 + (selectedFive * 87); // REPLACEME: REPLACE 0 with state variable from button;
+var leadSynthFilterFreqScale = new Tone.Scale(440, 10000);
+ToneMotion.ySig.chain(leadSynthFilterFreqScale, leadSynthFilter.frequency); // filter freq on y. also do volume?
+Tone.Transport.schedule(function(time) {
+  leadSynth.triggerAttack('C5');
+});
+
+// CHORDS
+var chordsFilter = new Tone.Filter(440, "lowpass").toMaster();
+var chordNote1 = new Tone.Synth({
+  oscillator: {
+    type: "square"
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.1,
+    sustain: 0.9,
+    release: 0.1
+  }
+}).connect(chordsFilter);
+var chordNote2 = new Tone.Synth({
+  oscillator: {
+    type: "square"
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.1,
+    sustain: 0.9,
+    release: 0.1
+  }
+}).connect(chordsFilter);
+var chordNote3 = new Tone.Synth({
+  oscillator: {
+    type: "square"
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.1,
+    sustain: 0.9,
+    release: 0.1
+  }
+}).connect(chordsFilter);
+// mute sound
+chordNote1.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+chordNote2.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+chordNote3.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+var chordFilterFreqScale = new Tone.Scale(440, 10000);
+ToneMotion.ySig.chain(chordFilterFreqScale, chordsFilter.frequency); // filter freq on y. also do volume?
+Tone.Transport.schedule(function(time) {
+  chordNote1.triggerAttack('C3');
+  chordNote2.triggerAttack('G3');
+  chordNote3.triggerAttack('E4');
+});
+
+// DRONE
+var droneFilter = new Tone.Filter(440, "lowpass").toMaster();
+var droneSynth = new Tone.Synth({
+  oscillator: {
+    type: "sawtooth"
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.1,
+    sustain: 0.9,
+    release: 0.1
+  }
+}).connect(droneFilter);
+droneSynth.volume.value = -99 + (selectedThree * 87); // REPLACEME: replace 1 with state variable from button
+
+var droneFilterFreqScale = new Tone.Scale(50, 1000);
+ToneMotion.ySig.chain(droneFilterFreqScale, droneFilter.frequency); // filter freq on y. also do volume?
+
+Tone.Transport.schedule(function(time) {
+  droneSynth.triggerAttack("C2");
+});
+
+/*
+// Action button methods
+TMScore.cueEnablesButtons[1] = [1,0,0]; // cue 1 enables action button 1, but disables actions buttons 2 and 3
+function goButton1Cue1() {
+  if (ToneMotion.print) { console.log("goButton1Cue1() called"); }
+}
+*/
+
+
+
+/******************************************************************
+********************* DRUMS TRIGGERED WITH FLICK ******************
+*******************************************************************/
+var testHiHat = new Tone.Player("./TMassets/audio/sounds-from-eddie/hihat.wav").toMaster();
+testHiHat.volume.value = -99 + (selectedSix * 99); // REPLACEME: REPLACE 0 with state variable from button;
+var testKick = new Tone.Player("./TMassets/audio/sounds-from-eddie/punch_kick.wav").toMaster();
+testKick.volume.value = -99 + (selectedTwo * 99); // REPLACEME: REPLACE 0 with state variable from button;
+var testTriangle = new Tone.Player("./TMassets/audio/sounds-from-eddie/Triangle.wav").toMaster();
+testTriangle.volume.value = -99 + (selectedFour * 87); // REPLACEME: REPLACE 0 with state variable from button;
+
+var freezeTimer; // prevent immediate retrigger with hacky solution that freezes trigger for certain period
+freezeTimer = 0;
+var startFreezeTimer = false;
+var triggerSoundInterval = 50; // interval in milliseconds for polling triggerFlag
+var freezeInterval = 250; // interval in milliseconds during which trigger is frozen to prevent repeated notes
+function triggerSoundWithFlick() {
+  // interval to check if sound needs to be triggered. set variable for polling interval
+  if (ToneMotion.triggerFlag == true) {
+    if (freezeTimer == 0) {
+      testHiHat.start();
+      testKick.start();
+      testTriangle.start();
+
+      startFreezeTimer = true;
+    }
+  }
+  if (startFreezeTimer == true) {
+    freezeTimer++;
+  }
+  if (freezeTimer > (freezeInterval/triggerSoundInterval)) {
+    freezeTimer = 0;
+    startFreezeTimer = false;
+  }
+}
+
+
+
+
+// Interactive sounds in this cue
+function updateSoundsInCue1() {
+  leadSynth.volume.value = -99 + (selectedFive * 87); // REPLACEME: REPLACE 0 with state variable from button;
+  chordNote1.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+  chordNote2.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+  chordNote3.volume.value = -99 + (selectedOne * 87); // REPLACEME: replace 0 with state variable from button
+  droneSynth.volume.value = -99 + (selectedThree * 87); // REPLACEME: replace 1 with state variable from button
+  testHiHat.volume.value = -99 + (selectedSix * 99); // REPLACEME: REPLACE 0 with state variable from button;
+  testKick.volume.value = -99 + (selectedTwo * 99); // REPLACEME: REPLACE 0 with state variable from button;
+  testTriangle.volume.value = -99 + (selectedFour * 87); // REPLACEME: REPLACE 0 with state variable from button;
+
+  if (ToneMotion.print) { console.log("updating cue 1 sounds"); }
+
+  if (ToneMotion.x < 1/8) {
+    leadSynth.frequency.value = 'C4'; // C Lydian scale
+    chordNote1.frequency.value = 'C3';
+    chordNote2.frequency.value = 'G3';
+    chordNote3.frequency.value = 'E4';
+  }
+  else if (ToneMotion.x < 2/8) {
+    leadSynth.frequency.value = 'D4';
+    chordNote1.frequency.value = 'C3';
+    chordNote2.frequency.value = 'G3';
+    chordNote3.frequency.value = 'E4';
+  }
+  else if (ToneMotion.x < 3/8) {
+    leadSynth.frequency.value = 'E4';
+    chordNote1.frequency.value = 'G3';
+    chordNote2.frequency.value = 'E4';
+    chordNote3.frequency.value = 'G4';
+  }
+  else if (ToneMotion.x < 4/8) {
+    leadSynth.frequency.value = 'F#4';
+    chordNote1.frequency.value = 'G3';
+    chordNote2.frequency.value = 'E4';
+    chordNote3.frequency.value = 'G4';
+  }
+  else if (ToneMotion.x < 5/8) {
+    leadSynth.frequency.value = 'G4';
+    chordNote1.frequency.value = 'E4';
+    chordNote2.frequency.value = 'G4';
+    chordNote3.frequency.value = 'B4';
+  }
+  else if (ToneMotion.x < 6/8) {
+    leadSynth.frequency.value = 'A4';
+    chordNote1.frequency.value = 'E4';
+    chordNote2.frequency.value = 'G4';
+    chordNote3.frequency.value = 'B4';
+  }
+  else if (ToneMotion.x < 7/8) {
+    leadSynth.frequency.value = 'B4';
+    chordNote1.frequency.value = 'G4';
+    chordNote2.frequency.value = 'B4';
+    chordNote3.frequency.value = 'D5';
+  }
+  else {
+    leadSynth.frequency.value = 'C5';
+    chordNote1.frequency.value = 'G4';
+    chordNote2.frequency.value = 'B4';
+    chordNote3.frequency.value = 'D5';
+  }
+}
+/******************************************************************
+*********************** OUTPUT AND CLEAN-UP ***********************
+*******************************************************************/
+
+// Stop sounds
+function stopScript() {
+  // shut down sounds here
+  leadSynth.triggerRelease();
+  chordNote1.triggerRelease();
+  chordNote2.triggerRelease();
+  chordNote3.triggerRelease();
+  droneSynth.triggerRelease();
+
+  if (ToneMotion.print) { console.log("stopScript() called"); }
+  ToneMotion.shutdown();
+  ToneMotionInterface.shutdown();
+}
+
+/******************************************************************
+*********************** END OF CODE FOR SOUND *********************
+*******************************************************************/
+</script>
+<script src="./TMassets/js/ToneMotionInterface_v1-5.js"></script>
+</body>
+</html>
